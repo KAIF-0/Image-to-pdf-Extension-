@@ -41,7 +41,7 @@ export const generatePDF = (
           const y = (pageHeight - imgHeight) / 2
 
           //adding image to pdf
-          pdf.addImage(images[i], "JPEG", x, y, imgWidth, imgHeight)
+          await pdf.addImage(images[i], "JPEG", x, y, imgWidth, imgHeight)
         } catch (error) {
           console.error("Error adding image to PDF:", error)
           throw error
